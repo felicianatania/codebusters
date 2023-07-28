@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('phoneNumber');
             $table->string('userName')->unique();
             $table->string('loginPassword');
-            $table->string('confirmationPassword');
             $table->integer('gender')->default('1');
             $table->date('birthDate');
             $table->rememberToken();
