@@ -3,13 +3,11 @@ import { toRefs } from 'vue';
 import { usePage } from '@inertiajs/vue3';
 
 import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
-import Magnify from 'vue-material-design-icons/Magnify.vue';
-import Compass from 'vue-material-design-icons/Compass.vue';
-import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
-import SendOutline from 'vue-material-design-icons/SendOutline.vue';
-import Plus from 'vue-material-design-icons/Plus.vue';
-import AccountOutline from 'vue-material-design-icons/AccountOutline.vue';
-import Menu from 'vue-material-design-icons/Menu.vue';
+import Dashboard from 'vue-material-design-icons/ViewDashboardOutline.vue';
+import Car from 'vue-material-design-icons/CarOutline.vue';
+import Predict from 'vue-material-design-icons/RobotOutline.vue';
+import Exit from 'vue-material-design-icons/ExittoApp.vue';
+
 
 const props = defineProps({ iconString: String})
 const {iconString} = toRefs(props)
@@ -18,32 +16,27 @@ const {iconString} = toRefs(props)
 
 let icon = null
 
-if(iconString.value === 'Home') icon = HomeOutline
-if(iconString.value === 'Search') icon = Magnify
-if(iconString.value === 'Explore') icon = Compass
-if(iconString.value === 'Messages') icon = SendOutline
-if(iconString.value === 'Notifications') icon = HeartOutline
-if(iconString.value === 'Create') icon = Plus
-if(iconString.value === 'Profile') icon = AccountOutline
-if(iconString.value === 'Log out') icon = Menu
+if(iconString.value === 'Beli Rumah') icon = HomeOutline
+if(iconString.value === 'Dashboard') icon = Dashboard
+if(iconString.value === 'Beli Mobil') icon = Car
+if(iconString.value === 'Memprediksi Pengeluaran') icon = Predict
+if(iconString.value === 'Log out') icon = Exit
 
 </script>
 
 <template>
-    <div class="w-full xl:inline-block xl:hover:bg-gray-100 p-2 rounded-full transition duration-300 ease-in-out cursor-pointer">
+    <div class="w-[175px] xl:inline-block py-2 px-3 rounded-[4px] hover:bg-orange-500 transition duration-300 ease-in-out cursor-pointer group hover:text-white">
         <div class="flex items-center">
-            <img
-            v-if="iconString === 'Profile'"
-            :class="{'mr-1': iconString === 'Profile'}"
-            class="rounded-full ml-[2px] w-[30px] h-[30px] cursor-pointer object-cover"
-            src="https://i.pinimg.com/originals/14/e7/fd/14e7fde33ea0f19fe080aa57e77f7d8f.jpg"
-            >
-            <!-- ika nilai properti iconString adalah "Profile", maka kelas CSS "mr-1" akan ditambahkan ke elemen -->
-            <component v-else :is="icon" fillColor="#000000" :size="36" />
-            <span class="xl:block hidden text-black font-extrabold text-[18px] pl-2 mt-0.5">
+            <component :is="icon" :size="30" :class="{'fill-white': isHovered}" />
+            <span class="xl:block hidden font-extrabold text-[18px] pl-2 mt-0.5">
                 {{ iconString }}
-
             </span>
         </div>
     </div>
 </template>
+
+<style>
+    .fill-white {
+        fill: #FFFFFF;
+    }
+</style>
