@@ -7,10 +7,14 @@ import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 
 const form = useForm({
-    name: '',
+    ktpId: '',
     email: '',
+    phoneNumber: '',
+    userNumber: '',
     password: '',
     password_confirmation: '',
+    gender: '',
+    birthDate: '',
 });
 
 const submit = () => {
