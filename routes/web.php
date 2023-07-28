@@ -17,24 +17,3 @@ use Illuminate\Support\Facades\Http;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/make-api-request', function () {
-    $url = 'http://34.101.154.14:8175/hackathon/user/auth/create';
-    $data = [
-        "ktpId" => "4746585764531234",
-        "userName" => "Ayu",
-        "phoneNumber" => "81234567890",
-        "loginPassword" => "12345678",
-        "birthDate" => "11101998",
-        "gender" => 1,
-        "email" => "ayu@gmail.com"
-    ];
-
-    $response = Http::post($url, $data);
-    // dd($response);
-
-    // Handle the response
-    $responseData = $response->json();
-    dd($response->status());
-    // Do something with $responseData
-});
