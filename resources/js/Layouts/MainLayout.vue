@@ -9,6 +9,13 @@ import Predict from 'vue-material-design-icons/RobotOutline.vue';
 import Exit from 'vue-material-design-icons/ExittoApp.vue';
 
 import MenuItem from '@/Components/MenuItem.vue'
+// import BeliRumah from '@/Pages/BeliRumah.vue';
+
+// export default{
+//     components:{
+//         'beli-rumah': BeliRumah,
+//     },
+// };
 
 </script>
 
@@ -24,7 +31,7 @@ import MenuItem from '@/Components/MenuItem.vue'
                 <Link href="/">
                     <MenuItem iconString="Dashboard" class="mb-4"/>
                 </Link>
-                <Link href="/">
+                <Link href="/BeliRumah">
                     <MenuItem iconString="Beli Rumah" class="mb-4"/>
                 </Link>
                 <Link href="/">
