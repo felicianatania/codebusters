@@ -30,7 +30,7 @@ import MenuItem from '@/Components/MenuItem.vue'
                 <Link href="/">
                     <MenuItem iconString="Dashboard" class="mb-5"></MenuItem>
                 </Link>
-                <Link href="/BeliRumah">
+                <Link href="/beliRumah1">
                     <MenuItem iconString="Beli Rumah" class="mb-4"/>
                 </Link>
                 <Link href="/">

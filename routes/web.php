@@ -19,8 +19,14 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Dashboard');
 });
-Route::get('/BeliRumah', function () {
-    return Inertia::render('BeliRumah');
+Route::get('/beliRumah1', function () {
+    return Inertia::render('BeliRumah1');
+});
+Route::get('/beliRumah2', function () {
+    return Inertia::render('BeliRumah2');
+});
+Route::get('/beliRumah3', function () {
+    return Inertia::render('BeliRumah3');
 });
 
 Route::middleware('auth')->group(function () {
