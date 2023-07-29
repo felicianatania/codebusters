@@ -15,7 +15,7 @@ const form = useForm({
     password: '',
     password_confirmation: '',
     gender: '',
-    birthdate: '',
+    birthDate: '',
 });
 
 const submit = () => {
@@ -26,7 +26,7 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout imageSrc="storage/assets/auth/register.png">
         <Head title="Register" />
 
         <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
