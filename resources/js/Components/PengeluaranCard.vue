@@ -3,7 +3,7 @@ import Eye from 'vue-material-design-icons/Eye.vue';
 </script>
 
 <template>
-    <a href="#" class="block w-[365px] p-6 border border-gray-200 rounded-[4px] dark:border-gray-700 dark:hover:bg-gray-700 h-[170px]"
+    <a href="#" class="block w-[32%] p-6 border border-gray-200 rounded-[4px] h-[170px]"
     style="background: linear-gradient(225deg, #DF0101 0%, #B2012B 100%);
     transition: background 0.3s;">
         <div class="flex flex-col h-full justify-between">
@@ -19,7 +19,7 @@ import Eye from 'vue-material-design-icons/Eye.vue';
                 <div class="flex-grow"></div>
             </div>
             <p v-if="isBalanceVisible" class="text-3xl font-bold text-white">
-                Rp 4.590.000,00
+                Rp4.590.000,00
             </p>
             <p v-else class="text-3xl font-bold text-white">
                 xxxxxxxxxx

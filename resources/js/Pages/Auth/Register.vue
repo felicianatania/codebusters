@@ -6,6 +6,8 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import { ref } from 'vue';
+import axios from 'axios';
 
 const form = useForm({
     ktpId: '',
@@ -17,26 +19,52 @@ const form = useForm({
     gender: '',
     birthDate: '',
 });
+const csrfToken = ref(document.querySelector('meta[name="csrf-token"]').content);
+const validateRegister = async () => {
+    if (form.password != form.password_confirmation) {
+        alert("Konfirmasi password salah!");
+        return;
+    }
 
-const submit = () => {
-    form.post(route('register'), {
-        onFinish: () => form.reset('password', 'password_confirmation'),
-    });
+    let gender = 0;
+    if (form.gender == "female") {
+        gender = 1;
+    }
+
+    const response = await axios.post('http://34.101.154.14:8175/hackathon/user/auth/create', {
+        ktpId: form.ktpId,
+        phoneNumber: form.phoneNumber,
+        username: form.username,
+        email: form.email,
+        loginPassword: form.loginPassword,
+        gender: gender,
+        birthDate: form.birthDate
+    }, { responseType: 'json' });
+
+    if (!response.data.success) { 
+        alert(response.data.errMsg) 
+        return;
+    }
+
+    console.log(response.data)
+    window.location.href = '/login';
 };
+
 </script>
 
 <template>
     <GuestLayout imageSrc="storage/assets/auth/register.png">
         <Head title="Register" />
 
-        <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
+        <ApplicationLogo></ApplicationLogo>
 
         <div class="text-center">
             <h1 class="text-darkorange text-headline font-bold">Halo!</h1>
             <p class="mt-2 text-black text-subheading font-medium">Daftarkan akunmu</p>
         </div>
 
-        <form @submit.prevent="submit" class="w-7/12">
+        <form @submit.prevent="validateRegister" class="w-7/12">
+            <input type="hidden" name="_token" :value="csrfToken" />
             <div>
                 <InputLabel for="ktpId" value="Nomor KTP" />
 
@@ -74,7 +102,7 @@ const submit = () => {
 
                 <TextInput
                     id="phoneNumber"
-                    type="text"
+                    type="number"
                     placeholder="Masukkan nomor telepon"
                     class="mt-1 block w-full"
                     v-model="form.phoneNumber"
@@ -83,6 +111,22 @@ const submit = () => {
                 />
 
                 <InputError class="mt-2" :message="form.errors.phoneNumber" />
+            </div>
+
+            <div class="mt-4">
+                <InputLabel for="username" value="Username" />
+
+                <TextInput
+                    id="username"
+                    type="text"
+                    placeholder="Masukkan username"
+                    class="mt-1 block w-full"
+                    v-model="form.username"
+                    required
+                    autofocus
+                />
+
+                <InputError class="mt-2" :message="form.errors.username" />
             </div>
 
             <div class="mt-4">
@@ -105,7 +149,7 @@ const submit = () => {
 
                 <TextInput
                     id="password_confirmation"
-                    type="text"
+                    type="password"
                     placeholder="Konfirmasi password Anda"
                     class="mt-1 block w-full"
                     v-model="form.password_confirmation"
@@ -119,12 +163,12 @@ const submit = () => {
             <div class="mt-4 flex gap-5 items-center">
                 <InputLabel for="gender" value="Gender" />
                 <label class="flex gap-2 items-center text-name text-black font-normal">
-                    <input type="radio" name="gender" class="border-darkorange" value="male">
+                    <input type="radio" name="gender" class="border-darkorange" value="male" v-model="form.gender">
                     Male
                 </label>
     
                 <label class="flex gap-2 items-center text-name text-black font-normal">
-                    <input type="radio" name="gender" class="border-darkorange" value="female">
+                    <input type="radio" name="gender" class="border-darkorange" value="female" v-model="form.gender">
                     Female
                 </label>
             </div>
@@ -145,7 +189,7 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.birthDate" />
             </div>
 
-            <PrimaryButton class="w-full mt-10" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <PrimaryButton type="submit" class="w-full mt-10">
                 Daftar
             </PrimaryButton>
 

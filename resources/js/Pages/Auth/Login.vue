@@ -14,7 +14,6 @@ const form = useForm({
     password: '',
 });
 const csrfToken = ref(document.querySelector('meta[name="csrf-token"]').content);
-const loginEndpoint = ref('/login');
 const validateLogin = async () => {
     const response = await axios.post('http://34.101.154.14:8175/hackathon/user/auth/token', {
         username: form.username,
@@ -38,7 +37,7 @@ const validateLogin = async () => {
     <GuestLayout imageSrc="storage/assets/auth/login.png">
         <Head title="Log In" />
 
-        <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
+        <ApplicationLogo></ApplicationLogo>
 
         <div class="text-center">
             <h1 class="text-darkorange text-headline font-bold">Selamat Datang!</h1>
