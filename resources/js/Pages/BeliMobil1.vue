@@ -32,7 +32,7 @@
             <h1 class="pb-8 text-heading font-bold"> Perencanaan Pembelian Mobil </h1>
             <form action="">
             <div class="flex flex-col pb-6">
-                <InputLabel for="waktu" value ="Waktu yang dibutuhkan untuk membeli mobil yang diinginkan" />
+                <InputLabel for="waktu" value ="Waktu yang dibutuhkan untuk membeli mobil yang diinginkan (tahun)" />
                 <TextInput v-model="mobil.waktu" id="waktu" type="text" class="w-52 mt-4"/>
             </div>
             <div class="flex flex-col pb-6">
