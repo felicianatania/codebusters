@@ -29,7 +29,7 @@
     <h1 class="pb-8 text-heading font-bold"> Ringkasan </h1>
 
     <div class="container flex justify-stretch">
-        <div class="w-1/3 mb-10">
+        <div class="w-1/3 mb-10 mr-70">
             <div class="bg-darkyellow p-4">
                 <div>Total bunga KPR yang harus kamu bayarkan adalah</div>
                 <div class="text-title font-bold text-darkorange">Rp Xx.xxx.xxx,00</div>
@@ -41,7 +41,7 @@
                 <div>dan ini setara dengan <span class="text-title font-bold text-darkorange">x-y%</span> dari penghasilan bulananmu.</div>
             </div>
             <div class="bg-darkyellow mt-7 p-4">
-                <div>Rasio ini sudah <span class="text-title font-bold text-darkorange">berbahaya,</span> karena berpotensi mengganggu cash flow mu di masa depan.</div>
+                <div>Rasio ini sudah <span class="font-bold text-darkorange">sehat</span></div>
             </div>
         </div>
 
