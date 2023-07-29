@@ -7,6 +7,7 @@ import TextInput from '@/Components/TextInput.vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import { ref } from 'vue';
+import axios from 'axios';
 
 const form = useForm({
     username: '',
@@ -14,6 +15,23 @@ const form = useForm({
 });
 const csrfToken = ref(document.querySelector('meta[name="csrf-token"]').content);
 const loginEndpoint = ref('/login');
+const validateLogin = async () => {
+    const response = await axios.post('http://34.101.154.14:8175/hackathon/user/auth/token', {
+        username: form.username,
+        loginPassword: form.password,
+    }, { responseType: 'json' });
+
+    if (!response.data.success) { 
+        alert(response.data.errMsg) 
+        return;
+    }
+
+    const token = response.data.data.accessToken;
+    await axios.post('/login', { token });
+    // console.log(token);
+    // localStorage.setItem('accessToken', token);
+    // window.location.href = '/dashboard';
+};
 
 </script>
 
@@ -28,7 +46,7 @@ const loginEndpoint = ref('/login');
             <p class="mt-2 text-black text-subheading font-medium">Masuk ke akunmu</p>
         </div>
 
-        <form :action="loginEndpoint" method="POST" class="w-7/12">
+        <form @submit.prevent="validateLogin" class="w-7/12">
             <input type="hidden" name="_token" :value="csrfToken" />
             <div>
                 <InputLabel for="username" value="Username" />

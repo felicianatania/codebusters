@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -15,8 +16,14 @@ class UserController extends Controller
         return Inertia::render('Auth/Register');
     }
 
-    public function validateLogin() {
-        dd("Hello World");
+    public function validateLogin(Request $request) {
+        $accessToken = $request->input('token');
+        Session::put('accessToken', $accessToken);
+        return redirect('/dashboard');
     }
 
+    public function logout() {
+        if (Session::has('accessToken')) Session::forget('accessToken');
+        return redirect('/login');
+    }
 }

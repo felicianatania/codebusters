@@ -23,21 +23,14 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [UserController::class, 'validateLogin'])->name('validateLogin');
 });
 
-// Route::middleware('auth')->group(function () {
+Route::middleware('session.token')->group(function () {
+    Route::get('/logout', [UserController::class, 'logout']);
     Route::get('/beliMobil1', function(){ return Inertia::render('BeliMobil1'); });
     Route::get('/beliMobil2', function(){ return Inertia::render('BeliMobil2'); });
     Route::get('/beliMobil3', function(){ return Inertia::render('BeliMobil3'); });
     Route::get('/dashboard', function(){ return Inertia::render('Dashboard'); });
     Route::get('/memprediksi', function(){ return Inertia::render('MemprediksiPengeluaran'); });
-// });
-
-
-Route::get('/beliRumah1', function () {
-    return Inertia::render('BeliRumah1');
-});
-Route::get('/beliRumah2', function () {
-    return Inertia::render('BeliRumah2');
-});
-Route::get('/beliRumah3', function () {
-    return Inertia::render('BeliRumah3');
+    Route::get('/beliRumah1', function () { return Inertia::render('BeliRumah1'); });
+    Route::get('/beliRumah2', function () { return Inertia::render('BeliRumah2'); });
+    Route::get('/beliRumah3', function () { return Inertia::render('BeliRumah3'); });
 });
