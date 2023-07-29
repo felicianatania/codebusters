@@ -27,3 +27,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/beliMobil1', function(){
+    return Inertia::render('BeliMobil1');
+});
