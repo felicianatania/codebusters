@@ -2,16 +2,14 @@
     import MainLayout from '@/Layouts/MainLayout.vue';
     import TextInput from '@/Components/TextInput.vue';
     import InputLabel from '@/Components/InputLabel.vue';
-    import ComponentCP from '@/Components/ComponentCP.vue';
+    import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
     <Head title="Dashboard" />
 
     <MainLayout>
-        <!-- <div class="w-full border-b border-darkorange border-opacity-20 border-solid border-t-0 border-l-0 border-r-0"> -->
-            <h1 class="text-title font-bold"> Beli Mobil </h1>
-        <!-- </div> -->
+        <h1 class="text-title font-bold"> Beli Mobil </h1>
         <hr class="text-transparent h-[3px] my-5 bg-darkorange bg-opacity-20">
         <div class="box-container flex flex-row place-content-evenly items-center my-12">
             <div class="box flex flex-col items-center justify-center w-40">
@@ -69,7 +67,7 @@
         </form>
     </div>
 
-    <Link> Selanjutnya > </Link>
+    <Link href="/beliMobil2" class="text-darkorange font-semibold"> Selanjutnya > </Link>
 
     </MainLayout>
 </template>
