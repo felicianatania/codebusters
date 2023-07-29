@@ -27,10 +27,9 @@ const validateLogin = async () => {
     }
 
     const token = response.data.data.accessToken;
-    await axios.post('/login', { token });
-    // console.log(token);
-    // localStorage.setItem('accessToken', token);
-    // window.location.href = '/dashboard';
+    const status = await axios.post('/login', { token });
+    console.log(status);
+    window.location.href = '/dashboard';
 };
 
 </script>

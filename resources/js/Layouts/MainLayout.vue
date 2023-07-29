@@ -34,7 +34,7 @@ import MenuItem from '@/Components/MenuItem.vue'
                     <MenuItem iconString="Memprediksi Pengeluaran" class="mb-5"></MenuItem>
                 </Link>
             </div>
-            <Link href="/">
+            <Link href="/logout">
                 <MenuItem iconString="Log out" class="items-center absolute bottom-10 ml-12"></MenuItem>
             </Link>
         </div>

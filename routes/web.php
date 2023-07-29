@@ -28,7 +28,7 @@ Route::middleware('session.token')->group(function () {
     Route::get('/beliMobil1', function(){ return Inertia::render('BeliMobil1'); });
     Route::get('/beliMobil2', function(){ return Inertia::render('BeliMobil2'); });
     Route::get('/beliMobil3', function(){ return Inertia::render('BeliMobil3'); });
-    Route::get('/dashboard', function(){ return Inertia::render('Dashboard'); });
+    Route::get('/dashboard', function(){ return Inertia::render('Dashboard'); })->name('dashboard');
     Route::get('/memprediksi', function(){ return Inertia::render('MemprediksiPengeluaran'); });
     Route::get('/beliRumah1', function () { return Inertia::render('BeliRumah1'); });
     Route::get('/beliRumah2', function () { return Inertia::render('BeliRumah2'); });

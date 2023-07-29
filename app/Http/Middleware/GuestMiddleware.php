@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class GuestMiddleware
 {
@@ -16,7 +17,7 @@ class GuestMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()) {
+        if (Session::has('accessToken')) {
             return redirect()->back();
         }
 

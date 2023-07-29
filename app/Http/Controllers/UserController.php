@@ -19,7 +19,7 @@ class UserController extends Controller
     public function validateLogin(Request $request) {
         $accessToken = $request->input('token');
         Session::put('accessToken', $accessToken);
-        return redirect('/dashboard');
+        return response()->json(['success' => 'Successfully added the access token to session']);
     }
 
     public function logout() {
