@@ -16,7 +16,6 @@ use Inertia\Inertia;
 |
 */
 
-
 Route::middleware('guest')->group(function () {
     Route::get('/', function () { return redirect('login'); });
     Route::get('/register', [UserController::class, 'register']);
@@ -30,4 +29,8 @@ require __DIR__.'/auth.php';
     Route::get('/beliMobil1', function(){ return Inertia::render('BeliMobil1'); });
     Route::get('/beliMobil2', function(){ return Inertia::render('BeliMobil2'); });
     Route::get('/beliMobil3', function(){ return Inertia::render('BeliMobil3'); });
+    Route::get('/dashboard', function(){ return Inertia::render('Dashboard'); });
+    Route::get('/memprediksi', function(){ return Inertia::render('MemprediksiPengeluaran'); });
 // });
+
+
