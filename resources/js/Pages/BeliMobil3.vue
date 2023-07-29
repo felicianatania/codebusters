@@ -14,11 +14,11 @@
         <div class="box-container flex flex-row place-content-evenly items-center my-12">
             <div class="box flex flex-col items-center justify-center w-40">
                 <h1 class="text-subheading w-10 h-10 border-2 border-grey flex items-center justify-center text-2xl text-gray font-bold"> 1 </h1>
-                <h2 class="pt-2 text-center"> Perencanaan Pembelian Mobil </h2>
+                <h2 class="pt-2 text-center text-grey"> Perencanaan Pembelian Mobil </h2>
             </div>
             <div class="box flex flex-col items-center justify-center w-40">
                 <h1 class="text-subheading w-10 h-10 border-2 border-grey flex items-center justify-center text-2xl text-gray font-bold"> 2 </h1>
-                <h2 class="pt-2 text-center"> Strategi Investasi </h2>
+                <h2 class="pt-2 text-center text-grey"> Strategi Investasi </h2>
             </div>
             <div class="box flex flex-col items-center justify-center w-40">
                 <h1 class="text-title w-16 h-16 bg-darkorange flex items-center justify-center text-2xl text-white font-bold"> 3 </h1>
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div class="container flex space-x-44">
+        <div class="container flex justify-between">
             <div>
                 <h1 class="pb-4 text-heading font-bold"> Ringkasan </h1>
                 <div class="pb-9">

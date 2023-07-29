@@ -28,7 +28,7 @@
 
     <h1 class="pb-8 text-heading font-bold"> Ringkasan </h1>
 
-    <div class="container flex space-x-44">
+    <div class="container flex justify-between">
         <div class="w-1/3 mb-10">
             <div class="bg-darkyellow p-4">
                 <div>Total bunga KPR yang harus kamu bayarkan adalah</div>
