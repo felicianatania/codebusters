@@ -6,7 +6,12 @@
     <Head title="Dashboard" />
 
     <MainLayout>
-        <div class="bg-green-500">DASHBOARD.VUE</div>
+        <div class="bg-blue-300 w-full">
+            DASHBOARD
+            <h1>
+                Hello
+            </h1>
+        </div>
     </MainLayout>
 
 </template>
