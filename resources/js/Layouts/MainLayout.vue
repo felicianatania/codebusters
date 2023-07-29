@@ -3,6 +3,13 @@ import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
 import MenuItem from '@/Components/MenuItem.vue'
+// import BeliRumah from '@/Pages/BeliRumah.vue';
+
+// export default{
+//     components:{
+//         'beli-rumah': BeliRumah,
+//     },
+// };
 
 </script>
 
@@ -17,8 +24,8 @@ import MenuItem from '@/Components/MenuItem.vue'
                 <Link href="/dashboard">
                     <MenuItem iconString="Dashboard" class="mb-5"></MenuItem>
                 </Link>
-                <Link href="/">
-                    <MenuItem iconString="Beli Rumah" class="mb-5"></MenuItem>
+                <Link href="/beliRumah1">
+                    <MenuItem iconString="Beli Rumah" class="mb-4"/>
                 </Link>
                 <Link href="/beliMobil1">
                     <MenuItem iconString="Beli Mobil" class="mb-5"></MenuItem>
