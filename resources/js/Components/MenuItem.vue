@@ -25,7 +25,7 @@ if(iconString.value === 'Log out') icon = Exit
 </script>
 
 <template>
-    <div class="w-[175px] xl:inline-block py-2 px-3 rounded-[4px] hover:bg-orange-500 transition duration-300 ease-in-out cursor-pointer group hover:text-white">
+    <div class="w-[200px] xl:inline-block py-2 px-3 rounded-[4px] hover:bg-darkorange transition duration-300 ease-in-out cursor-pointer group hover:text-white">
         <div class="flex items-center">
             <component :is="icon" :size="30" :class="{'fill-white': isHovered}" />
             <span class="xl:block hidden font-extrabold text-[18px] pl-2 mt-0.5">
