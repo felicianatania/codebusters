@@ -40,7 +40,7 @@ import MenuItem from '@/Components/MenuItem.vue'
         </div>
 
         <div class="flex bg-lightyellow h-full w-100% overflow-auto">
-            <div class="ml-[20%] px-12 mt-12">
+            <div class="ml-[20%] px-12 mt-12 w-full">
                 <main>
                     <slot />
                 </main>
