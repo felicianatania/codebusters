@@ -31,3 +31,11 @@ require __DIR__.'/auth.php';
 Route::get('/beliMobil1', function(){
     return Inertia::render('BeliMobil1');
 });
+
+Route::get('/beliMobil2', function(){
+    return Inertia::render('BeliMobil2');
+});
+
+Route::get('/beliMobil3', function(){
+    return Inertia::render('BeliMobil3');
+});
