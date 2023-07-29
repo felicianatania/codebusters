@@ -30,7 +30,7 @@
         </div>
 
         <h1 class="font-semibold text-xl mt-11">Hasil Prediksi</h1>
-        <img class="pt-3 pb-5" src="../../line-chart-maker.png" alt="">
+        <img class="pt-3 pb-5" src="../../images/line-chart-maker.png" alt="">
         <div class="flex items-center pb-20">
             <h5 class="text-sm font-normal">Total pengeluaran: </h5>
             <h5 class="text-xl font-bold ml-3 text-darkorange">Rp Xx.xxx.xxx,xx</h5>
