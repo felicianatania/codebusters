@@ -2,12 +2,6 @@
 import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
-import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
-import Dashboard from 'vue-material-design-icons/ViewDashboardOutline.vue';
-import Car from 'vue-material-design-icons/CarOutline.vue';
-import Predict from 'vue-material-design-icons/RobotOutline.vue';
-import Exit from 'vue-material-design-icons/ExittoApp.vue';
-
 import MenuItem from '@/Components/MenuItem.vue'
 
 </script>
@@ -38,8 +32,8 @@ import MenuItem from '@/Components/MenuItem.vue'
             </Link>
         </div>
 
-        <div class="flex lg:justify-between bg-lightyellow h-full w-full overflow-auto">
-            <div class="ml-[20%] w-full p-12">
+        <div class="flex lg:justify-between bg-lightyellow h-full w-100% xl:pl-[50px] lg:pl-[100px] overflow-auto">
+            <div class="ml-[270px] mr-12 w-[2000px] md:pt-6 mt-6">
                 <main>
                     <slot />
                 </main>

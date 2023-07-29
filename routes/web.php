@@ -39,3 +39,7 @@ Route::get('/beliMobil2', function(){
 Route::get('/beliMobil3', function(){
     return Inertia::render('BeliMobil3');
 });
+
+Route::get('/dashboard', function(){
+    return Inertia::render('Dashboard');
+});
