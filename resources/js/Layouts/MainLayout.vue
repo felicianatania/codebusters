@@ -16,7 +16,7 @@ import MenuItem from '@/Components/MenuItem.vue'
 <template>
     <div id="MainLayout" class="w-full h-screen">
         <div id="SideNav" class="text-grey font-medium text-heading fixed w-1/5 h-full bg-yellow">
-            <Link href="/">
+            <Link href="/dashboard">
                 <img src="" alt="logo" class="xl:hidden block w-[25px] mt-10 ml-[25px] mb-10 cursor-pointer">
                 <img src="" alt="text logo" class="xl:block hidden w-[120px] mt-12 ml-12 mb-10 cursor-pointer">
             </Link>

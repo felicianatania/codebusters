@@ -54,8 +54,11 @@
     </div>
 
     <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
-        <Link href="/beliMobil2" class="pt-8"> Selanjutnya > </Link>
-    </div>
+            <hr class="text-transparent">
+            <div class="pt-8">
+                <Link href="/beliMobil2"> Selanjutnya > </Link>
+            </div>
+        </div>
 
     </MainLayout>
 </template>

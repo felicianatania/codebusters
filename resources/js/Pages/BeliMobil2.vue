@@ -50,10 +50,10 @@
         </div>
         <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
             <div>
-                <Link href="/beliMobil1" class="pt-8"> &lt; Sebelumnya </Link>
+                <Link href="/beliMobil1"> &lt; Sebelumnya </Link>
             </div>
             <div>
-                <Link href="/beliMobil3" class="pt-8"> Selanjutnya > </Link>
+                <Link href="/beliMobil3"> Selanjutnya > </Link>
             </div>
         </div>
 

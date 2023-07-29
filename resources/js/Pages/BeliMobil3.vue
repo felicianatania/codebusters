@@ -59,29 +59,11 @@
                     </div>
                 </div>
             </div>
-
-            <form action="">
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="waktu" value ="Waktu yang dibutuhkan untuk membeli mobil yang diinginkan" />
-                    <TextInput id="waktu" type="number"/>
-                </div>
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="harga" value ="Harga mobil yang diinginkan saat ini" />
-                    <TextInput id="harga" type="number"/>
-                </div>
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
-                    <TextInput id="dp" type="number"/>
-                </div>
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="inflasi" value ="Asumsi inflasi harga kendaraan (%)" />
-                    <TextInput id="inflasi" type="number"/>
-                </div>
-            </form>
+            <img src="../../images/yes.png" class="w-[500px] h-[500px]">
         </div>
         <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
-            <div>
-                <Link href="/beliMobil2" class="pt-8"> &lt; Sebelumnya </Link>
+            <div class="pt-8">
+                <Link href="/beliMobil2"> &lt; Sebelumnya </Link>
             </div>
         </div>
 

@@ -32,3 +32,12 @@ Route::middleware('guest')->group(function () {
 // });
 
 
+Route::get('/beliRumah1', function () {
+    return Inertia::render('BeliRumah1');
+});
+Route::get('/beliRumah2', function () {
+    return Inertia::render('BeliRumah2');
+});
+Route::get('/beliRumah3', function () {
+    return Inertia::render('BeliRumah3');
+});
