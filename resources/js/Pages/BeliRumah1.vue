@@ -26,7 +26,7 @@
             </div>
         </div>
 
-    <div class="container flex space-x-44">
+    <div class="container flex justify-between">
         <div>
             <h1 class="pb-8 text-heading font-bold"> Perencanaan Pembelian Rumah (Simulasi KPR)</h1>
 

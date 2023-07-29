@@ -50,7 +50,7 @@
 
     <h1 class="pb-8 text-heading font-bold"> Analisa </h1>
 
-    <div class="container flex space-x-4 w-50">
+    <div class="container flex justify-between w-50">
         <div class="w-1/3">
             <div class="bg-darkyellow p-4 mb-7">
                 <div>Pokok pinjaman</div>
