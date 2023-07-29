@@ -17,57 +17,48 @@
                 <h2 class="pt-2 text-center font-medium"> Perencanaan Pembelian Rumah </h2>
             </div>
             <div class="box flex flex-col items-center justify-center w-40">
-                <h1 class="text-subheading w-10 h-10 border-2 border-gray flex items-center justify-center text-2xl text-gray font-bold"> 2 </h1>
+                <h1 class="text-subheading w-10 h-10 border-2 border-grey flex items-center justify-center text-2xl text-grey font-bold"> 2 </h1>
                 <h2 class="pt-2 text-center"> Detail KPR </h2>
             </div>
             <div class="box flex flex-col items-center justify-center w-40">
-                <h1 class="text-subheading w-10 h-10 border-2 border-gray flex items-center justify-center text-2xl text-gray font-bold"> 3 </h1>
+                <h1 class="text-subheading w-10 h-10 border-2 border-grey flex items-center justify-center text-2xl text-grey font-bold"> 3 </h1>
                 <h2 class="pt-2 text-center"> Ringkasan </h2>
             </div>
         </div>
 
-    <h1 class="pb-8 text-heading font-bold"> Perencanaan Pembelian Rumah (Simulasi KPR)</h1>
-
     <div class="container flex space-x-44">
-        <form action="">
-            <div class="flex flex-col pb-6">
-                <InputLabel for="harga" value ="Harga rumah yang ingin dibeli saat ini" />
-                <TextInput id="harga" type="text" class="mt-4 appearance-none"/>
-            </div>
-            <div class="flex flex-col pb-6">
-                <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
-                <TextInput id="dp" type="text" class="mt-4"/>
-            </div>
-            <div class="flex flex-col pb-6">
-                <InputLabel for="penghasilan" value ="Penghasilan per Bulan" />
-                <TextInput id="penghasilan" type="text" class="mt-4"/>
-            </div>
-            <div class="flex flex-col pb-6">
-                <InputLabel for="pinjaman" value ="Jumlah Pinjaman Pokok" />
-                <TextInput id="pinjaman" type="text" class="mt-4"/>
-            </div>
-        </form>
-        <form action="">
-            <div class="flex flex-col pb-8">
-                <InputLabel for="waktu" value ="Waktu yang dibutuhkan untuk membeli mobil yang diinginkan" />
-                <TextInput id="waktu" type="number"/>
-            </div>
-            <div class="flex flex-col pb-8">
-                <InputLabel for="harga" value ="Harga mobil yang diinginkan saat ini" />
-                <TextInput id="harga" type="number"/>
-            </div>
-            <div class="flex flex-col pb-8">
-                <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
-                <TextInput id="dp" type="number"/>
-            </div>
-            <div class="flex flex-col pb-8">
-                <InputLabel for="inflasi" value ="Asumsi inflasi harga kendaraan (%)" />
-                <TextInput id="inflasi" type="number"/>
-            </div>
-        </form>
+        <div>
+            <h1 class="pb-8 text-heading font-bold"> Perencanaan Pembelian Rumah (Simulasi KPR)</h1>
+
+            <form action="">
+                <div class="flex flex-col pb-6">
+                    <InputLabel for="harga" value ="Harga rumah yang ingin dibeli saat ini" />
+                    <TextInput id="harga" type="text" class="mt-4 appearance-none"/>
+                </div>
+                <div class="flex flex-col pb-6">
+                    <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
+                    <TextInput id="dp" type="text" class="mt-4"/>
+                </div>
+                <div class="flex flex-col pb-6">
+                    <InputLabel for="penghasilan" value ="Penghasilan per Bulan" />
+                    <TextInput id="penghasilan" type="text" class="mt-4"/>
+                </div>
+                <div class="flex flex-col pb-6">
+                    <InputLabel for="pinjaman" value ="Jumlah Pinjaman Pokok" />
+                    <TextInput id="pinjaman" type="text" class="mt-4"/>
+                </div>
+            </form>
+        </div>
+
+        <img src="../../images/house1.png" alt="">
     </div>
 
-    <Link href="/beliRumah2" class="text-darkorange font-semibold"> Selanjutnya > </Link>
+    <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
+        <hr class="text-transparent">
+        <div class="pt-8">
+            <Link href="/beliRumah2"> Selanjutnya > </Link>
+        </div>
+    </div>
 
     </MainLayout>
 </template>
