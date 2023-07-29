@@ -1,5 +1,4 @@
 <script setup>
-import Checkbox from '@/Components/Checkbox.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
@@ -31,15 +30,16 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout imageSrc="../../../public/storage/assets/auth/authentication.png">
         <Head title="Log In" />
 
         <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
 
         <div class="text-center">
-            <h1 class="text-darkorange text-headline font-bold">Hello!</h1>
+            <h1 class="text-darkorange text-headline font-bold">Selamat Datang!</h1>
             <p class="mt-2 text-black text-subheading font-medium">Masuk ke akunmu</p>
         </div>
+
         <form @submit.prevent="submit" class="w-7/12">
             <div>
                 <InputLabel for="username" value="Username" />
@@ -79,7 +79,7 @@ const submit = () => {
 
             <p class="mt-5 text-center text-black text-subname font-normal">
                 Belum punya akun?
-                <Link class="text-darkorange font-normal hover:font-semibold underline">Daftar</Link>
+                <Link href="/register" class="text-darkorange font-normal hover:font-semibold underline">Daftar</Link>
             </p>
         </form>
     </GuestLayout>
