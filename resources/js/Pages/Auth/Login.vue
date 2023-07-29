@@ -63,7 +63,7 @@ const loginEndpoint = ref('/login');
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-            <PrimaryButton type="submit" class="mt-10">
+            <PrimaryButton type="submit" class="w-full mt-10">
                 Masuk
             </PrimaryButton>
 

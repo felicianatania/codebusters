@@ -145,7 +145,7 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.birthDate" />
             </div>
 
-            <PrimaryButton class="mt-10" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <PrimaryButton class="w-full mt-10" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                 Daftar
             </PrimaryButton>
 
