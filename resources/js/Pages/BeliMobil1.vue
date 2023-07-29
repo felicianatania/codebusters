@@ -3,6 +3,7 @@
     import TextInput from '@/Components/TextInput.vue';
     import InputLabel from '@/Components/InputLabel.vue';
     import { Link } from '@inertiajs/vue3';
+    import mobil from '../mobil';
 </script>
 
 <template>
@@ -26,27 +27,25 @@
             </div>
         </div>
 
-
-
     <div class="container flex justify-stretch">
         <div>
             <h1 class="pb-8 text-heading font-bold"> Perencanaan Pembelian Mobil </h1>
             <form action="">
             <div class="flex flex-col pb-6">
                 <InputLabel for="waktu" value ="Waktu yang dibutuhkan untuk membeli mobil yang diinginkan" />
-                <TextInput id="waktu" type="text" class="w-52 mt-4"/>
+                <TextInput v-model="mobil.waktu" id="waktu" type="text" class="w-52 mt-4"/>
             </div>
             <div class="flex flex-col pb-6">
                 <InputLabel for="harga" value ="Harga mobil yang diinginkan saat ini" />
-                <TextInput id="harga" type="text" class="mt-4 appearance-none"/>
+                <TextInput v-model="mobil.harga" id="harga" type="text" class="mt-4 appearance-none"/>
             </div>
             <div class="flex flex-col pb-6">
                 <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
-                <TextInput id="dp" type="text" class="mt-4"/>
+                <TextInput v-model="mobil.dp" id="dp" type="text" class="mt-4"/>
             </div>
             <div class="flex flex-col pb-6">
                 <InputLabel for="inflasi" value ="Asumsi inflasi harga kendaraan (%)" />
-                <TextInput id="inflasi" type="text" class="mt-4"/>
+                <TextInput v-model="mobil.inflasi" id="inflasi" type="text" class="mt-4"/>
             </div>
         </form>
         </div>

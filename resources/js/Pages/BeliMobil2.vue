@@ -3,6 +3,7 @@
     import TextInput from '@/Components/TextInput.vue';
     import InputLabel from '@/Components/InputLabel.vue';
     import { Link } from '@inertiajs/vue3';
+    import mobil from '../mobil';
 </script>
 
 <template>
@@ -34,15 +35,15 @@
                 <form action="">
                     <div class="flex flex-col pb-6">
                         <InputLabel for="uang" value ="Uang yang dimiliki saat ini untuk beli kendaraan yang diinginkan" />
-                        <TextInput id="uang" type="text" class="w-52 mt-4"/>
+                        <TextInput v-model="mobil.uang" id="uang" type="text" class="w-52 mt-4"/>
                     </div>
                     <div class="flex flex-col pb-6">
                         <InputLabel for="target" value ="Target investasi (per bulan)" />
-                        <TextInput id="target" type="text" class="mt-4 appearance-none"/>
+                        <TextInput v-model="mobil.target" id="target" type="text" class="mt-4 appearance-none"/>
                     </div>
                     <div class="flex flex-col pb-6">
                         <InputLabel for="instrumen" value ="Return dari instrumen investasi yang dipilih (% / tahun)" />
-                        <TextInput id="instrumen" type="text" class="mt-4"/>
+                        <TextInput v-model="mobil.instrumen" id="instrumen" type="text" class="mt-4"/>
                     </div>
                 </form>
             </div>
