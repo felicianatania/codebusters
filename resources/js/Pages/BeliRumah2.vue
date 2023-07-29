@@ -28,8 +28,9 @@
 
     <h1 class="pb-8 text-heading font-bold">Detail KPR </h1>
 
-    <div class="container flex">
-        <form action="" class="mr-7">
+    <div class="container flex justify-between">
+        <div class="flex">
+            <form action="" class="mr-7">
             <div class="flex flex-col pb-6">
                 <InputLabel for="waktuKPR" value ="Jangka Waktu KPR" />
                 <TextInput id="waktuKPR" type="text" class="w-52 mt-4"/>
@@ -49,8 +50,9 @@
                 <TextInput id="bungaFloating" type="text" class="w-52 mt-4"/>
             </div>
         </form>
+        </div>
 
-        <img src="../../images/house2.png" alt="">
+        <img class="pr-30" src="../../images/house2.png" alt="">
     </div>
 
     <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">

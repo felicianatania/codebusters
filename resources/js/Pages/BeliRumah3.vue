@@ -61,7 +61,7 @@
                 <div class="font-semibold">Rp xx.xxx.xxx,00</div>
             </div>
         </div>
-        <div class="w-1/3">
+        <div class="w-1/3 ml-7">
             <div class="bg-darkyellow p-4 mb-7">
                 <div>Jumlah periode</div>
                 <div class="font-semibold">Rp xx.xxx.xxx,00</div>
@@ -71,7 +71,7 @@
                 <div class="font-semibold">Rp xx.xxx.xxx,00</div>
             </div>
         </div>
-        <div class="w-1/3">
+        <div class="w-1/3 ml-7">
             <div class="bg-darkyellow p-4 mb-7">
                 <div>Bunga fix</div>
                 <div class="font-semibold">Rp xx.xxx.xxx,00</div>
