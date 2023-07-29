@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,8 +39,6 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [UserController::class, 'login'])->name('login');
     Route::post('/login', [UserController::class, 'validateLogin'])->name('validateLogin');
 });
-
-require __DIR__.'/auth.php';
 
 // Route::middleware('auth')->group(function () {
     Route::get('/beliMobil1', function(){ return Inertia::render('BeliMobil1'); });
