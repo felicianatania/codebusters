@@ -30,7 +30,7 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout imageSrc="../../../public/storage/assets/auth/authentication.png">
+    <GuestLayout imageSrc="storage/assets/auth/login.png">
         <Head title="Log In" />
 
         <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
@@ -64,6 +64,7 @@ const submit = () => {
                 <TextInput
                     id="password"
                     type="password"
+                    password="Masukkan pasword"
                     class="mt-1 block w-full"
                     v-model="form.password"
                     required
