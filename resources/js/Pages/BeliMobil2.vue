@@ -13,7 +13,7 @@
         <hr class="text-transparent h-[3px] my-5 bg-darkorange bg-opacity-20">
         <div class="box-container flex flex-row place-content-evenly items-center my-12">
             <div class="box flex flex-col items-center justify-center w-40">
-                <h1 class="text-subheading w-10 h-10 border-2 border-gray flex items-center justify-center text-2xl text-gray font-bold"> 1 </h1>
+                <h1 class="text-subheading w-10 h-10 border-2 border-gray flex items-center justify-center text-2xl text-grey font-bold"> 1 </h1>
                 <h2 class="pt-2 text-center"> Perencanaan Pembelian Mobil </h2>
             </div>
             <div class="box flex flex-col items-center justify-center w-40">
@@ -21,46 +21,32 @@
                 <h2 class="pt-2 text-center font-medium"> Strategi Investasi </h2>
             </div>
             <div class="box flex flex-col items-center justify-center w-40">
-                <h1 class="text-subheading w-10 h-10 border-2 border-gray flex items-center justify-center text-2xl text-gray font-bold"> 3 </h1>
+                <h1 class="text-subheading w-10 h-10 border-2 border-gray flex items-center justify-center text-2xl text-grey font-bold"> 3 </h1>
                 <h2 class="pt-2 text-center"> Ringkasan </h2>
             </div>
         </div>
 
-        <h1 class="pb-8 text-heading font-bold"> Strategi Investasi </h1>
+
 
         <div class="container flex space-x-44">
-            <form action="">
-                <div class="flex flex-col pb-6">
-                    <InputLabel for="waktu" value ="Uang yang dimiliki saat ini untuk beli kendaraan yang diinginkan" />
-                    <TextInput id="waktu" type="text" class="w-52 mt-4"/>
-                </div>
-                <div class="flex flex-col pb-6">
-                    <InputLabel for="harga" value ="Target investasi (per bulan)" />
-                    <TextInput id="harga" type="text" class="mt-4 appearance-none"/>
-                </div>
-                <div class="flex flex-col pb-6">
-                    <InputLabel for="dp" value ="Return dari instrumen investasi yang dipilih (% / tahun)" />
-                    <TextInput id="dp" type="text" class="mt-4"/>
-                </div>
-            </form>
-            <form action="">
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="waktu" value ="Waktu yang dibutuhkan untuk membeli mobil yang diinginkan" />
-                    <TextInput id="waktu" type="number"/>
-                </div>
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="harga" value ="Harga mobil yang diinginkan saat ini" />
-                    <TextInput id="harga" type="number"/>
-                </div>
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
-                    <TextInput id="dp" type="number"/>
-                </div>
-                <div class="flex flex-col pb-8">
-                    <InputLabel for="inflasi" value ="Asumsi inflasi harga kendaraan (%)" />
-                    <TextInput id="inflasi" type="number"/>
-                </div>
-            </form>
+            <div>
+                <h1 class="pb-8 text-heading font-bold"> Strategi Investasi </h1>
+                <form action="">
+                    <div class="flex flex-col pb-6">
+                        <InputLabel for="uang" value ="Uang yang dimiliki saat ini untuk beli kendaraan yang diinginkan" />
+                        <TextInput id="uang" type="text" class="w-52 mt-4"/>
+                    </div>
+                    <div class="flex flex-col pb-6">
+                        <InputLabel for="target" value ="Target investasi (per bulan)" />
+                        <TextInput id="target" type="text" class="mt-4 appearance-none"/>
+                    </div>
+                    <div class="flex flex-col pb-6">
+                        <InputLabel for="instrumen" value ="Return dari instrumen investasi yang dipilih (% / tahun)" />
+                        <TextInput id="instrumen" type="text" class="mt-4"/>
+                    </div>
+                </form>
+            </div>
+            <img src="../../images/invest.png" alt="">
         </div>
         <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
             <div>
