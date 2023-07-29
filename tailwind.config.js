@@ -23,6 +23,7 @@ export default {
                 darkyellow: '#FEEBB2',
                 darkblue: '#04A8F0',
                 lightblue: '#36B9F3',
+                yellowtb: '#FEEBB2'
             },
             fontFamily: {
                 sans: ['Poppins', 'sans-serif'],

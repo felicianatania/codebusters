@@ -1,5 +1,4 @@
 <script setup>
-import Checkbox from '@/Components/Checkbox.vue';
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
@@ -7,40 +6,30 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
-
-defineProps({
-    canResetPassword: {
-        type: Boolean,
-    },
-    status: {
-        type: String,
-    },
-});
+import { ref } from 'vue';
 
 const form = useForm({
     username: '',
     password: '',
-    remember: false,
 });
+const csrfToken = ref(document.querySelector('meta[name="csrf-token"]').content);
+const loginEndpoint = ref('/login');
 
-const submit = () => {
-    form.post(route('login'), {
-        onFinish: () => form.reset('password'),
-    });
-};
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout imageSrc="storage/assets/auth/login.png">
         <Head title="Log In" />
 
         <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
 
         <div class="text-center">
-            <h1 class="text-darkorange text-headline font-bold">Hello!</h1>
+            <h1 class="text-darkorange text-headline font-bold">Selamat Datang!</h1>
             <p class="mt-2 text-black text-subheading font-medium">Masuk ke akunmu</p>
         </div>
-        <form @submit.prevent="submit" class="w-7/12">
+
+        <form :action="loginEndpoint" method="POST" class="w-7/12">
+            <input type="hidden" name="_token" :value="csrfToken" />
             <div>
                 <InputLabel for="username" value="Username" />
 
@@ -64,6 +53,7 @@ const submit = () => {
                 <TextInput
                     id="password"
                     type="password"
+                    placeholder="Masukkan pasword"
                     class="mt-1 block w-full"
                     v-model="form.password"
                     required
@@ -73,13 +63,13 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-            <PrimaryButton class="mt-10" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <PrimaryButton type="submit" class="mt-10">
                 Masuk
             </PrimaryButton>
 
             <p class="mt-5 text-center text-black text-subname font-normal">
                 Belum punya akun?
-                <Link class="text-darkorange font-normal hover:font-semibold underline">Daftar</Link>
+                <Link href="/register" class="text-darkorange font-normal hover:font-semibold underline">Daftar</Link>
             </p>
         </form>
     </GuestLayout>

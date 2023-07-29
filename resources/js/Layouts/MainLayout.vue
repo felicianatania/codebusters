@@ -2,12 +2,6 @@
 import { ref } from 'vue';
 import { Link } from '@inertiajs/vue3';
 
-import HomeOutline from 'vue-material-design-icons/HomeOutline.vue';
-import Dashboard from 'vue-material-design-icons/ViewDashboardOutline.vue';
-import Car from 'vue-material-design-icons/CarOutline.vue';
-import Predict from 'vue-material-design-icons/RobotOutline.vue';
-import Exit from 'vue-material-design-icons/ExittoApp.vue';
-
 import MenuItem from '@/Components/MenuItem.vue'
 // import BeliRumah from '@/Pages/BeliRumah.vue';
 
@@ -27,16 +21,16 @@ import MenuItem from '@/Components/MenuItem.vue'
                 <img src="" alt="text logo" class="xl:block hidden w-[120px] mt-12 ml-12 mb-10 cursor-pointer">
             </Link>
             <div class="m-12">
-                <Link href="/">
+                <Link href="/dashboard">
                     <MenuItem iconString="Dashboard" class="mb-5"></MenuItem>
                 </Link>
                 <Link href="/beliRumah1">
                     <MenuItem iconString="Beli Rumah" class="mb-4"/>
                 </Link>
-                <Link href="/">
+                <Link href="/beliMobil1">
                     <MenuItem iconString="Beli Mobil" class="mb-5"></MenuItem>
                 </Link>
-                <Link href="/">
+                <Link href="/memprediksi">
                     <MenuItem iconString="Memprediksi Pengeluaran" class="mb-5"></MenuItem>
                 </Link>
             </div>
@@ -45,8 +39,8 @@ import MenuItem from '@/Components/MenuItem.vue'
             </Link>
         </div>
 
-        <div class="flex lg:justify-between bg-lightyellow h-full w-full overflow-auto">
-            <div class="ml-[20%] w-full p-12">
+        <div class="flex lg:justify-between bg-lightyellow h-full w-100% xl:pl-[50px] lg:pl-[100px] overflow-auto">
+            <div class="ml-[270px] mr-12 w-[2000px] md:pt-6 mt-6">
                 <main>
                     <slot />
                 </main>

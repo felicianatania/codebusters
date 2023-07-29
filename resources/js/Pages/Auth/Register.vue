@@ -5,12 +5,17 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
 const form = useForm({
-    name: '',
+    ktpId: '',
+    phoneNumber: '',
+    username: '',
     email: '',
     password: '',
     password_confirmation: '',
+    gender: '',
+    birthDate: '',
 });
 
 const submit = () => {
@@ -21,24 +26,31 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout>
+    <GuestLayout imageSrc="storage/assets/auth/register.png">
         <Head title="Register" />
 
-        <form @submit.prevent="submit">
+        <ApplicationLogo class="w-10 y-10"></ApplicationLogo>
+
+        <div class="text-center">
+            <h1 class="text-darkorange text-headline font-bold">Halo!</h1>
+            <p class="mt-2 text-black text-subheading font-medium">Daftarkan akunmu</p>
+        </div>
+
+        <form @submit.prevent="submit" class="w-7/12">
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="ktpId" value="Nomor KTP" />
 
                 <TextInput
-                    id="name"
+                    id="ktpId"
                     type="text"
+                    placeholder="Masukkan NIK sesuai KTP"
                     class="mt-1 block w-full"
-                    v-model="form.name"
+                    v-model="form.ktpId"
                     required
                     autofocus
-                    autocomplete="name"
                 />
 
-                <InputError class="mt-2" :message="form.errors.name" />
+                <InputError class="mt-2" :message="form.errors.ktpId" />
             </div>
 
             <div class="mt-4">
@@ -47,13 +59,30 @@ const submit = () => {
                 <TextInput
                     id="email"
                     type="email"
+                    placeholder="Masukkan email"
                     class="mt-1 block w-full"
                     v-model="form.email"
                     required
-                    autocomplete="username"
+                    autofocus
                 />
 
                 <InputError class="mt-2" :message="form.errors.email" />
+            </div>
+
+            <div class="mt-4">
+                <InputLabel for="phoneNumber" value="Nomor Telepon" />
+
+                <TextInput
+                    id="phoneNumber"
+                    type="text"
+                    placeholder="Masukkan nomor telepon"
+                    class="mt-1 block w-full"
+                    v-model="form.phoneNumber"
+                    required
+                    autofocus
+                />
+
+                <InputError class="mt-2" :message="form.errors.phoneNumber" />
             </div>
 
             <div class="mt-4">
@@ -62,42 +91,68 @@ const submit = () => {
                 <TextInput
                     id="password"
                     type="password"
+                    placeholder="Masukkan password"
                     class="mt-1 block w-full"
                     v-model="form.password"
                     required
-                    autocomplete="new-password"
                 />
 
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
             <div class="mt-4">
-                <InputLabel for="password_confirmation" value="Confirm Password" />
+                <InputLabel for="password_confirmation" value="Konfirmasi Password" />
 
                 <TextInput
                     id="password_confirmation"
-                    type="password"
+                    type="text"
+                    placeholder="Konfirmasi password Anda"
                     class="mt-1 block w-full"
                     v-model="form.password_confirmation"
                     required
-                    autocomplete="new-password"
+                    autofocus
                 />
 
                 <InputError class="mt-2" :message="form.errors.password_confirmation" />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link
-                    :href="route('login')"
-                    class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                    Already registered?
-                </Link>
-
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Register
-                </PrimaryButton>
+            <div class="mt-4 flex gap-5 items-center">
+                <InputLabel for="gender" value="Gender" />
+                <label class="flex gap-2 items-center text-name text-black font-normal">
+                    <input type="radio" name="gender" class="border-darkorange" value="male">
+                    Male
+                </label>
+    
+                <label class="flex gap-2 items-center text-name text-black font-normal">
+                    <input type="radio" name="gender" class="border-darkorange" value="female">
+                    Female
+                </label>
             </div>
+
+            <div class="mt-4">
+                <InputLabel for="birthDate" value="Tanggal Lahir" />
+
+                <TextInput
+                    id="birthDate"
+                    type="date"
+                    placeholder="Masukkan tanggal lahir"
+                    class="mt-1 block w-full"
+                    v-model="form.birthDate"
+                    required
+                    autofocus
+                />
+
+                <InputError class="mt-2" :message="form.errors.birthDate" />
+            </div>
+
+            <PrimaryButton class="mt-10" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                Daftar
+            </PrimaryButton>
+
+            <p class="mt-5 text-center text-black text-subname font-normal">
+                Sudah punya akun?
+                <Link href="/login" class="text-darkorange font-normal hover:font-semibold underline">Masuk</Link>
+            </p>
         </form>
     </GuestLayout>
 </template>
