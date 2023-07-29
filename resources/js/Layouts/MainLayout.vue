@@ -41,7 +41,7 @@ import MenuItem from '@/Components/MenuItem.vue'
         <div class="flex lg:justify-between bg-lightyellow h-full w-full overflow-auto">
             <div class="ml-[20%] w-full p-12">
                 <main>
-                    <slot></slot>
+                    <slot />
                 </main>
             </div>
         </div>
