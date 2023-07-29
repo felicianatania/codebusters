@@ -3,6 +3,18 @@
     import TextInput from '@/Components/TextInput.vue';
     import InputLabel from '@/Components/InputLabel.vue';
     import { Link } from '@inertiajs/vue3';
+    import rumah from '../house';
+
+    let pokokPinjaman = (1-(parseInt(rumah.dp)/100)) * parseInt(rumah.harga);
+    let hitung = ((pokokPinjaman * parseInt(rumah.bungaFix) *parseInt(rumah.periodeBungaFix)) + pokokPinjaman * parseInt(rumah.bungaFloating) * (parseInt(rumah.waktuKPR) - parseInt(rumah.periodeBungaFix)));
+    let hitungPersen = (hitung / ((parseInt(rumah.harga) - (100 - parseInt(rumah.dp)) / 100))).toFixed(2);
+    let lowest = (hitung - hitung/2).toFixed(0);
+    let highest = (hitung - hitung/5).toFixed(0);
+    let lowestPercen = (lowest/parseInt(rumah.penghasilan)).toFixed(2);
+    let periodeBungaFloating = parseInt(rumah.waktuKPR)-parseInt(rumah.periodeBungaFix);
+    let bungaFloating = pokokPinjaman * parseInt(rumah.bungaFloating) * periodeBungaFloating;
+    let bungaFix = pokokPinjaman * parseInt(rumah.bungaFix) * parseInt(rumah.periodeBungaFix);
+    let highestPercen = (highest/parseInt(rumah.penghasilan)).toFixed(2);
 </script>
 
 <template>
@@ -32,13 +44,13 @@
         <div class="w-1/3 mb-10">
             <div class="bg-darkyellow p-4">
                 <div>Total bunga KPR yang harus kamu bayarkan adalah</div>
-                <div class="text-title font-bold text-darkorange">Rp Xx.xxx.xxx,00</div>
-                <div>Setara dengan <span class="text-title font-bold text-darkorange">X.X%</span> dari pokok pinjamanmu.</div>
+                <div class="text-title font-bold text-darkorange">Rp {{hitung}},00</div>
+                <div>Setara dengan <span class="text-title font-bold text-darkorange">{{ hitungPersen }}%</span> dari pokok pinjamanmu.</div>
             </div>
             <div class="bg-darkyellow mt-7 p-4">
                 <div>Cicilan KPRmu dalam rentang </div>
-                <div class="text-title font-bold text-darkorange">Rp Xx,xxx,xxx-Xx,xxx,xxx</div>
-                <div>dan ini setara dengan <span class="text-title font-bold text-darkorange">x-y%</span> dari penghasilan bulananmu.</div>
+                <div class="text-title font-bold text-darkorange">Rp {{lowest}},00-{{ highest }},00</div>
+                <div>dan ini setara dengan <span class="text-title font-bold text-darkorange">{{lowestPercen}}-{{highestPercen}}%</span> dari penghasilan bulananmu.</div>
             </div>
             <div class="bg-darkyellow mt-7 p-4">
                 <div>Rasio ini sudah <span class="text-title font-bold text-darkorange">berbahaya,</span> karena berpotensi mengganggu cash flow mu di masa depan.</div>
@@ -54,31 +66,31 @@
         <div class="w-1/3">
             <div class="bg-darkyellow p-4 mb-7">
                 <div>Pokok pinjaman</div>
-                <div class="font-semibold">Rp xx.xxx.xxx,00</div>
+                <div class="font-semibold">Rp {{pokokPinjaman}},00</div>
             </div>
             <div class="bg-darkyellow p-4">
                 <div>Total bunga periode fix</div>
-                <div class="font-semibold">Rp xx.xxx.xxx,00</div>
+                <div class="font-semibold">Rp {{ bungaFix }},00</div>
             </div>
         </div>
         <div class="w-1/3 ml-7">
             <div class="bg-darkyellow p-4 mb-7">
                 <div>Jumlah periode</div>
-                <div class="font-semibold">Rp xx.xxx.xxx,00</div>
+                <div class="font-semibold">{{ rumah.waktuKPR }} bulan</div>
             </div>
             <div class="bg-darkyellow p-4">
                 <div>Bunga floating</div>
-                <div class="font-semibold">Rp xx.xxx.xxx,00</div>
+                <div class="font-semibold">{{ rumah.bungaFloating }}%</div>
             </div>
         </div>
         <div class="w-1/3 ml-7">
             <div class="bg-darkyellow p-4 mb-7">
                 <div>Bunga fix</div>
-                <div class="font-semibold">Rp xx.xxx.xxx,00</div>
+                <div class="font-semibold">{{ rumah.bungaFix }}%</div>
             </div>
             <div class="bg-darkyellow p-4">
                 <div>Total bunga periode floating</div>
-                <div class="font-semibold">Rp xx.xxx.xxx,00</div>
+                <div class="font-semibold">Rp {{ bungaFloating }},00</div>
             </div>
         </div>
     </div>

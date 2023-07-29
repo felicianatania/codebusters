@@ -44,10 +44,6 @@
                     <InputLabel for="penghasilan" value ="Penghasilan per Bulan" />
                     <TextInput v-model="rumah.penghasilan" id="penghasilan" type="text" class="mt-4"/>
                 </div>
-                <div class="flex flex-col pb-6">
-                    <InputLabel for="pinjaman" value ="Jumlah Pinjaman Pokok" />
-                    <TextInput v-model="rumah.pinjaman" id="pinjaman" type="text" class="mt-4"/>
-                </div>
             </form>
         </div>
 
