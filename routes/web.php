@@ -34,3 +34,6 @@ Route::middleware('session.token')->group(function () {
     Route::get('/beliRumah2', function () { return Inertia::render('BeliRumah2'); });
     Route::get('/beliRumah3', function () { return Inertia::render('BeliRumah3'); });
 });
+Route::get('/beliRumahYes', function () {
+    return Inertia::render('BeliRumahYes');
+});

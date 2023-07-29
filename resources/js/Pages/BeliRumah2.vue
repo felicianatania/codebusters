@@ -3,6 +3,7 @@
     import TextInput from '@/Components/TextInput.vue';
     import InputLabel from '@/Components/InputLabel.vue';
     import { Link } from '@inertiajs/vue3';
+    import rumah from '../house';
 </script>
 
 <template>
@@ -28,34 +29,42 @@
 
     <h1 class="pb-8 text-heading font-bold">Detail KPR </h1>
 
-    <div class="container flex justify-between">
+    <div class="container flex justify-stretch">
         <div class="flex">
+            <!-- Form pertama -->
             <form action="" class="mr-7">
+            <!-- input Waktu kpr -->
             <div class="flex flex-col pb-6">
                 <InputLabel for="waktuKPR" value ="Jangka Waktu KPR" />
-                <TextInput id="waktuKPR" type="text" class="w-52 mt-4"/>
+                <TextInput v-model="rumah.waktuKPR" id="waktuKPR" type="text" class="w-52 mt-4"/>
             </div>
+            <!-- input Periode suku bunga fix -->
             <div class="flex flex-col pb-6">
                 <InputLabel for="periodeBungaFix" value ="Periode Suku Bunga Fix" />
-                <TextInput id="periodeBungaFix" type="text" class="w-52 mt-4 appearance-none"/>
+                <TextInput v-model="rumah.periodeBungaFix" id="periodeBungaFix" type="text" class="w-52 mt-4 appearance-none"/>
             </div>
         </form>
+
+        <!-- Form kedua -->
         <form action="">
+            <!-- input suku bunga fix -->
             <div class="flex flex-col pb-6">
                 <InputLabel for="bungaFix" value ="Suku Bunga Fix (%)" />
-                <TextInput id="bungaFix" type="text" class="w-52 mt-4"/>
+                <TextInput v-model="rumah.bungaFix" id="bungaFix" type="text" class="w-52 mt-4"/>
             </div>
+            <!-- Input Suku Bunga Floating -->
             <div class="flex flex-col pb-6">
                 <InputLabel for="bungaFloating" value ="Suku Bunga Floating (%)" />
-                <TextInput id="bungaFloating" type="text" class="w-52 mt-4"/>
+                <TextInput v-model="rumah.bungaFloating" id="bungaFloating" type="text" class="w-52 mt-4"/>
             </div>
         </form>
         </div>
-
-        <img class="pr-30" src="../../images/house2.png" alt="">
+        <div class="ml-40" >
+            <img src="../../images/house2.png" class="w-[450px] h-[365px]" alt="">
+        </div>
     </div>
 
-    <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
+    <div class="text-darkorange font-semibold flex flex-row pt-8 justify-between">
         <div>
             <Link href="/beliRumah1"> &lt; Sebelumnya </Link>
         </div>

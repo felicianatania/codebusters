@@ -3,6 +3,7 @@
     import TextInput from '@/Components/TextInput.vue';
     import InputLabel from '@/Components/InputLabel.vue';
     import { Link } from '@inertiajs/vue3';
+    import rumah from '../house';
 </script>
 
 <template>
@@ -33,19 +34,19 @@
             <form action="">
                 <div class="flex flex-col pb-6">
                     <InputLabel for="harga" value ="Harga rumah yang ingin dibeli saat ini" />
-                    <TextInput id="harga" type="text" class="mt-4 appearance-none"/>
+                    <TextInput v-model="rumah.harga" id="harga" type="text" class="mt-4 appearance-none"/>
                 </div>
                 <div class="flex flex-col pb-6">
                     <InputLabel for="dp" value ="DP yang ingin dibayar (%)" />
-                    <TextInput id="dp" type="text" class="mt-4"/>
+                    <TextInput v-model="rumah.dp" id="dp" type="text" class="mt-4"/>
                 </div>
                 <div class="flex flex-col pb-6">
                     <InputLabel for="penghasilan" value ="Penghasilan per Bulan" />
-                    <TextInput id="penghasilan" type="text" class="mt-4"/>
+                    <TextInput v-model="rumah.penghasilan" id="penghasilan" type="text" class="mt-4"/>
                 </div>
                 <div class="flex flex-col pb-6">
                     <InputLabel for="pinjaman" value ="Jumlah Pinjaman Pokok" />
-                    <TextInput id="pinjaman" type="text" class="mt-4"/>
+                    <TextInput v-model="rumah.pinjaman" id="pinjaman" type="text" class="mt-4"/>
                 </div>
             </form>
         </div>
