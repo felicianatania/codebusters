@@ -6,27 +6,15 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
-
-defineProps({
-    canResetPassword: {
-        type: Boolean,
-    },
-    status: {
-        type: String,
-    },
-});
+import { ref } from 'vue';
 
 const form = useForm({
     username: '',
     password: '',
-    remember: false,
 });
+const csrfToken = ref(document.querySelector('meta[name="csrf-token"]').content);
+const loginEndpoint = ref('/login');
 
-const submit = () => {
-    form.post(route('login'), {
-        onFinish: () => form.reset('password'),
-    });
-};
 </script>
 
 <template>
@@ -40,7 +28,8 @@ const submit = () => {
             <p class="mt-2 text-black text-subheading font-medium">Masuk ke akunmu</p>
         </div>
 
-        <form @submit.prevent="submit" class="w-7/12">
+        <form :action="loginEndpoint" method="POST" class="w-7/12">
+            <input type="hidden" name="_token" :value="csrfToken" />
             <div>
                 <InputLabel for="username" value="Username" />
 
@@ -64,7 +53,7 @@ const submit = () => {
                 <TextInput
                     id="password"
                     type="password"
-                    password="Masukkan pasword"
+                    placeholder="Masukkan pasword"
                     class="mt-1 block w-full"
                     v-model="form.password"
                     required
@@ -74,7 +63,7 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-            <PrimaryButton class="mt-10" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+            <PrimaryButton type="submit" class="mt-10">
                 Masuk
             </PrimaryButton>
 
