@@ -2,6 +2,7 @@
   import MainLayout from '@/Layouts/MainLayout.vue';
   import PrimaryButton from '@/Components/PrimaryButton.vue';
   import TextInput from '@/Components/TextInput.vue';
+  import ChartComponent from '@/Components/ChartComponent.vue';
 </script>
 
 <template>
@@ -30,11 +31,16 @@
         </div>
 
         <h1 class="font-semibold text-xl mt-11">Hasil Prediksi</h1>
-        <img class="pt-3 pb-5" src="../../images/line-chart-maker.png" alt="">
-        <div class="flex items-center pb-20">
-            <h5 class="text-sm font-normal">Total pengeluaran: </h5>
-            <h5 class="text-xl font-bold ml-3 text-darkorange">Rp Xx.xxx.xxx,xx</h5>
+        <div class="isi w-[1040px] pt-3">
+            <ChartComponent class="pb-5"/>
+            <div class="flex items-center pb-20">
+                <h5 class="text-sm font-normal">Total pengeluaran: </h5>
+                <h5 class="text-xl font-bold ml-3 text-darkorange">Rp Xx.xxx.xxx,xx</h5>
+            </div>
         </div>
+
+
+
     </div>
   </MainLayout>
 </template>

@@ -9,7 +9,7 @@
   <Head title="Dashboard"/>
 
   <MainLayout>
-    <div class=" ml-10 mr-2 h-full">
+    <div class=" ml-5 h-full">
       <h1 class="text-3xl font-bold pb-4 border-b-2 border-orange-200">
         Dashboard
       </h1>
