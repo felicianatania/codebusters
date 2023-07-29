@@ -39,8 +39,8 @@ import MenuItem from '@/Components/MenuItem.vue'
             </Link>
         </div>
 
-        <div class="flex lg:justify-between bg-lightyellow h-full w-100% xl:pl-[50px] lg:pl-[100px] overflow-auto">
-            <div class="ml-[270px] mr-12 w-[2000px] md:pt-6 mt-6">
+        <div class="flex bg-lightyellow h-full w-100% overflow-auto">
+            <div class="ml-[20%] px-12 mt-12">
                 <main>
                     <slot />
                 </main>
