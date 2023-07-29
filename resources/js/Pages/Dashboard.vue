@@ -3,6 +3,7 @@
   import SaldoCard from '@/Components/SaldoCard.vue';
   import Pengeluaran from '@/Components/PengeluaranCard.vue';
   import Pemasukan from '@/Components/Pemasukan.vue';
+  import eventBus from '../house';
 </script>
 
 <template>
@@ -50,6 +51,8 @@
           </tr>
         </tbody>
       </table>
+
+      <!-- <p>Harga rumah yang ingin dibeli: {{ eventBus.harga }}</p> -->
 
     </div>
   </MainLayout>
