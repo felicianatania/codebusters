@@ -41,3 +41,6 @@ Route::get('/beliRumah2', function () {
 Route::get('/beliRumah3', function () {
     return Inertia::render('BeliRumah3');
 });
+Route::get('/beliRumahYes', function () {
+    return Inertia::render('BeliRumahYes');
+});
