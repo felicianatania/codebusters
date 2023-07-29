@@ -4,15 +4,13 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-        <div>
-            <Link href="/">
-                <ApplicationLogo class="w-20 h-20 fill-current text-gray-500" />
-            </Link>
+    <div class="flex h-max min-h-screen">
+        <div class="fixed w-1/2 top-1/2 -translate-y-1/2 flex items-center">
+            <!-- Insert Image -->
         </div>
 
         <div
-            class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
+            class="ml-[50%] w-1/2 flex flex-col gap-10 items-center justify-center bg-lightyellow"
         >
             <slot />
         </div>
