@@ -28,7 +28,7 @@
 
     <h1 class="pb-8 text-heading font-bold">Detail KPR </h1>
 
-    <div class="container flex justify-between">
+    <div class="container flex justify-stretch">
         <div class="flex">
             <form action="" class="mr-7">
             <div class="flex flex-col pb-6">
@@ -51,11 +51,12 @@
             </div>
         </form>
         </div>
-
-        <img class="pr-30" src="../../images/house2.png" alt="">
+        <div class="ml-40" >
+            <img src="../../images/house2.png" class="w-[450px] h-[365px]" alt="">
+        </div>
     </div>
 
-    <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
+    <div class="text-darkorange font-semibold flex flex-row pt-8 justify-between">
         <div>
             <Link href="/beliRumah1"> &lt; Sebelumnya </Link>
         </div>

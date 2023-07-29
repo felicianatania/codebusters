@@ -28,7 +28,7 @@
 
 
 
-        <div class="container flex justify-between">
+        <div class="container flex justify-stretch">
             <div>
                 <h1 class="pb-8 text-heading font-bold"> Strategi Investasi </h1>
                 <form action="">
@@ -46,9 +46,12 @@
                     </div>
                 </form>
             </div>
-            <img src="../../images/invest.png" alt="">
+            <div class="pl-[240px]">
+                <img src="../../images/invest.png" class="w-[400px] h-[400px]" alt="">
+            </div>
+
         </div>
-        <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
+        <div class="text-darkorange font-semibold flex flex-row pt-8 pb-16 justify-between">
             <div>
                 <Link href="/beliMobil1"> &lt; Sebelumnya </Link>
             </div>

@@ -28,7 +28,7 @@
 
 
 
-    <div class="container flex justify-between">
+    <div class="container flex justify-stretch">
         <div>
             <h1 class="pb-8 text-heading font-bold"> Perencanaan Pembelian Mobil </h1>
             <form action="">
@@ -50,10 +50,13 @@
             </div>
         </form>
         </div>
-        <img src="../../images/car.png" alt="">
+        <div class="pl-[220px]">
+            <img src="../../images/car.png" alt="">
+        </div>
+
     </div>
 
-    <div class="text-darkorange font-semibold flex flex-row pt-8 pb-20 justify-between">
+    <div class="text-darkorange font-semibold flex flex-row pb-20 justify-between">
             <hr class="text-transparent">
             <div class="pt-8">
                 <Link href="/beliMobil2"> Selanjutnya > </Link>
