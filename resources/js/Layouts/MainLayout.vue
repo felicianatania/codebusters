@@ -14,16 +14,16 @@ import MenuItem from '@/Components/MenuItem.vue'
                 <img src="" alt="text logo" class="xl:block hidden w-[120px] mt-12 ml-12 mb-10 cursor-pointer">
             </Link>
             <div class="m-12">
-                <Link href="/">
+                <Link href="/dashboard">
                     <MenuItem iconString="Dashboard" class="mb-5"></MenuItem>
                 </Link>
                 <Link href="/">
                     <MenuItem iconString="Beli Rumah" class="mb-5"></MenuItem>
                 </Link>
-                <Link href="/">
+                <Link href="/beliMobil1">
                     <MenuItem iconString="Beli Mobil" class="mb-5"></MenuItem>
                 </Link>
-                <Link href="/">
+                <Link href="/memprediksi">
                     <MenuItem iconString="Memprediksi Pengeluaran" class="mb-5"></MenuItem>
                 </Link>
             </div>

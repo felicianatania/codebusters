@@ -43,3 +43,7 @@ Route::get('/beliMobil3', function(){
 Route::get('/dashboard', function(){
     return Inertia::render('Dashboard');
 });
+
+Route::get('/memprediksi', function(){
+    return Inertia::render('MemprediksiPengeluaran');
+});
